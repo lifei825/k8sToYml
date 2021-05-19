@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e1843dd-126f-4dac-bef0-ef04b9236cec" name="Default Changelist" comment="" />
+    <list default="true" id="3e1843dd-126f-4dac-bef0-ef04b9236cec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simplYaml.go" beforeDir="false" afterPath="$PROJECT_DIR$/simplYaml.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,10 +19,14 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1rdrOHPQlPZsmJiN3URFgHSjhiM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -77,10 +85,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="123" width="1071" height="701" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1619510513234" />
-    <state x="453" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619598422113">
+    <state x="453" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619661952026">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="453" y="270" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1619598422113" />
+    <state x="453" y="270" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1619661952026" />
     <state x="619" y="330" key="EnvironmentVariablesDialog" timestamp="1619334507887">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

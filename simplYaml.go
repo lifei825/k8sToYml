@@ -136,8 +136,17 @@ func main() {
 	//err = yaml.Unmarshal(config, &rsType) 反射 本身就是指针 去掉&
 	err = yaml.Unmarshal(strOldYaml, rsType)
 	//转换成yaml字符串类型
-	strYaml, err := yaml.Marshal(rsType)
-	err = ioutil.WriteFile(defaultYamlPath, strYaml, 0666)
+	builder := &strings.Builder{}
+	encoder := yaml.NewEncoder(builder)
+	// 设置缩进2个空格，注意要在Encode前面才生效
+	encoder.SetIndent(2)
+	err = encoder.Encode(rsType)
+	myUtil.Check(err)
+	err = encoder.Close()
+	myUtil.Check(err)
+	strYaml := builder.String()
+	//strYaml, err := yaml.Marshal(rsType)
+	err = ioutil.WriteFile(defaultYamlPath, []byte(strYaml), 0666)
 	myUtil.Check(err)
 	fmt.Printf("save success: %s\n", defaultYamlPath)
 }
