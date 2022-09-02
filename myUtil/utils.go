@@ -14,7 +14,8 @@ func Check(e error) {
 
 func DateTime() string {
 	currentTime := time.Now()
-	datetime := currentTime.Format("2006-01-02-15-04-05")
+	// datetime := currentTime.Format("2006-01-02-15-04-05")
+	datetime := currentTime.Format("20060102150405")
 	return datetime
 }
 
@@ -37,7 +38,7 @@ func FileCreate(filename string) (bool, error) {
 		if err != nil {
 			fmt.Printf("文件创建失败：%s\n", err)
 		}
-		defer func() {_=fp.Close()}()
+		defer func() { _ = fp.Close() }()
 		return true, err
 	}
 	fmt.Printf("文件创建失败：%s\n", err)
