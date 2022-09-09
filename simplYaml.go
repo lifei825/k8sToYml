@@ -89,6 +89,21 @@ type StatefulSet struct {
 	Metadata   Metadata    `yaml:"metadata"`
 }
 
+type ClusterRole struct {
+	Kind       string      `yaml:"kind"`
+	ApiVersion string      `yaml:"apiVersion"`
+	Rules      interface{} `yaml:"rules"`
+	Metadata   Metadata    `yaml:"metadata"`
+}
+
+type RoleBinding struct {
+	Kind       string      `yaml:"kind"`
+	ApiVersion string      `yaml:"apiVersion"`
+	RoleRef    interface{} `yaml:"roleRef"`
+	Subjects   interface{} `yaml:"subjects"`
+	Metadata   Metadata    `yaml:"metadata"`
+}
+
 func init() {
 	RegisterResource["ConfigMap"] = &ConfigMap{}
 	RegisterResource["Secret"] = &Secret{}
@@ -100,7 +115,11 @@ func init() {
 	RegisterResource["Deployment"] = &Deployment{}
 	RegisterResource["Service"] = &Service{}
 	RegisterResource["StatefulSet"] = &StatefulSet{}
+	RegisterResource["ClusterRole"] = &ClusterRole{}
+	RegisterResource["RoleBinding"] = &RoleBinding{}
 	// 复用
+	RegisterResource["ClusterRoleBinding"] = &RoleBinding{}
+	RegisterResource["Role"] = &ClusterRole{}
 	RegisterResource["DaemonSet"] = &StatefulSet{}
 	RegisterResource["ReplicaSet"] = &Deployment{}
 	RegisterResource["HorizontalPodAutoscaler"] = &Deployment{}
